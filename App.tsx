@@ -1,12 +1,4 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow
- */
-
-import React from 'react';
+import * as React from 'react';
 import {
   SafeAreaView,
   StyleSheet,
@@ -24,7 +16,7 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
-const App: () => React$Node = () => {
+function App() {
   return (
     <>
       <StatusBar barStyle="dark-content" />
@@ -33,11 +25,6 @@ const App: () => React$Node = () => {
           contentInsetAdjustmentBehavior="automatic"
           style={styles.scrollView}>
           <Header />
-          {global.HermesInternal == null ? null : (
-            <View style={styles.engine}>
-              <Text style={styles.footer}>Engine: Hermes</Text>
-            </View>
-          )}
           <View style={styles.body}>
             <View style={styles.sectionContainer}>
               <Text style={styles.sectionTitle}>Step One</Text>
@@ -70,7 +57,7 @@ const App: () => React$Node = () => {
       </SafeAreaView>
     </>
   );
-};
+}
 
 const styles = StyleSheet.create({
   scrollView: {
@@ -111,4 +98,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default App;
+export {App};
